@@ -1,0 +1,24 @@
+ADD NEW USER INTERFACE
+
+<?php
+
+/*controller studentbook
+handle studentbook view
+*/
+
+Class Studentbook extends controller
+{
+	Public $errors= array();
+	
+	Public $messages= array();
+	
+	/*handles sellbook view
+	*/
+	
+	public function index($value='')
+	{
+		$this->view->studentbooks= $this->model->getstudents();
+		$this->view->render('studentbook/index', true);
+	}
+	
+}
